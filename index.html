@@ -27,7 +27,7 @@
         <meta property="og:type" content="article">
         <meta property="og:title" content="Introduction to Git & GitHub"> 
         <meta property="og:description" content="Slides are available at <a href='https://kieranwood.ca/intro-to-git' target=_blank>https://kieranwood.ca/intro-to-git</a><br><br>If you want to participate during the demo please also:<br><a href='https://github.com/signup' target=_blank>signup for a GitHub account</a>, and <a href='https://desktop.github.com/' target=_blank>download Github Desktop</a>">
-        <meta property="og:updated_time" content="2021-09-21 06:59:39.243960">
+        <meta property="og:updated_time" content="2021-10-15 00:07:34.667094">
         <meta property="og:image" content="static/images/share-webslides.jpg">
 
         <!-- TWITTER -->
@@ -77,9 +77,11 @@
 					<h2>What are we going to do today</h2>
 					<div class='grid content-center'>
 							<ul style='text-align:justify;'>
-								<li>Learn about version management</li>
-								<li>Teach you how to use git and GitHub</li>
-								<li>Provide you with some references to come back and learn more</li>
+								<li>Making sure you are set up with GitHub Desktop</li>
+								<li>What is Git/GitHub and why would you want to use it?</li>
+								<li>Overview of the Git workflow</li>
+								<li>Hands-on demo using GitHub</li>
+								<li>Some extra features of Git</li>
 					</div>
 							</ul>
 
@@ -91,7 +93,7 @@
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>Some setup steps</h2>
-<p>If you haven't yet please <a href='https://github.com/signup' target=_blank>sign up for a GitHub account</a>, and <a href='https://desktop.github.com/' target=_blank>download Github Desktop</a> if you want to participate in the demo</p>
+<p>If you haven't yet please <a href='https://github.com/signup' target=_blank>sign up for a GitHub account</a>, and <a href='https://desktop.github.com/' target=_blank>download Github Desktop</a> if you want to participate in the demo</p> <style>ul>li{padding-top: 3px;padding-bottom: 3px;}ol{font-size:x-large;}ul{font-size:x-large;}ol>li{text-align: justify;}</style>
 					</div>
 				</div>
 			</section>
@@ -109,15 +111,8 @@
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>What is Version Management?</h2>
-					<p>Some examples include</p>
-					<div class='grid content-center'>
-							<ul style='text-align:justify;'>
-								<li>Android/IOS</li>
-								<li>Google Docs</li>
-								<li>Almost any App or Software</li>
-					</div>
-							</ul>
-
+					<p>Version management refers generally to systems that help track changes in a project, and/or different versions</p>
+<img src='./static/images/version_management.png' alt='version management' >
 					</div>
 				</div>
 			</section>
@@ -125,7 +120,7 @@
 			<section class='bg-facebook slide-center'>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
-					<h2>Why keep old versions?</h2>
+					<h2>Why keep old/different versions?</h2>
 					<p>It may seem redundant to keep old versions, but there are good reasons like:</p>
 					<div class='grid content-center'>
 							<ul style='text-align:justify;'>
@@ -133,6 +128,30 @@
 								<li>If new versions have a major break in them you can rollback</li>
 								<li>If people preferred how the old system operated</li>
 								<li>etc...</li>
+					</div>
+							</ul>
+<img src='./static/images/python_versions.png' alt='python versions' >
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-facebook slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Comes in many shapes and sizes</h2>
+<br><h4 style='font-style: italic'>Naming systems</h4>					<div class='grid content-center'>
+							<ul style='text-align:justify;'>
+								<li>Dates August 2017, Q2 2019, October 14 2021 etc.</li>
+								<li>IOS 7, 8, 9, 10 etc.</li>
+								<li>Python 2.4, 2.5, 2.6, 2.7, 3.0, 3.1 etc.</li>
+								<li>Android KitKat, Lollipop, Marshmallow etc.</li>
+					</div>
+							</ul>
+<br><br><h4 style='font-style: italic'>Software To Help do version management:</h4>					<div class='grid content-center'>
+							<ul style='text-align:justify;'>
+								<li>Git (Most important!), SVN, Mercurial, Perforce</li>
+								<li>Google Docs, Google Sheets, OneDrive etc.</li>
+								<li>Many more...</li>
 					</div>
 							</ul>
 
@@ -145,7 +164,7 @@
 					<div class='content-center'>
 					<h2>A story of how not to do it</h2>
 					<p>When I was but a wee lad...</p>
-
+<img src='./static/images/story.png' alt='Story' >
 					</div>
 				</div>
 			</section>
@@ -175,6 +194,8 @@
 								<li>Copies of project start taking up a lot of space</li>
 								<li>Ordered by date, so have to dig through to see what's been changed</li>
 								<li>All documentation of changes was manual, and didn't tell me what actually changed in the files line-by-line</li>
+								<li>If someone wanted to help me they would have to download each update folder by folder to have old versions</li>
+								<li>Using Google Translate instead of asking someone who spoke Italian what the software said... (not fixed by version management)</li>
 					</div>
 							</ul>
 
@@ -182,7 +203,7 @@
 				</div>
 			</section>
 
-			<section class='bg-facebook slide-center'>
+			<section class='bg-grey slide-center'>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>This is where Git comes in</h2>
@@ -192,7 +213,7 @@
 				</div>
 			</section>
 
-			<section class='bg-facebook slide-center'>
+			<section class='bg-grey slide-center'>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>Why is git better?</h2>
@@ -200,10 +221,11 @@
 					<div class='grid content-center'>
 							<ul style='text-align:justify;'>
 								<li>Uses much less space</li>
-								<li>go back in time easily</li>
-								<li>multiple versions</li>
-								<li>let's you add messages so you know what each change was at a glance</li>
-								<li>have people download 1 set of files to run your project</li>
+								<li>Go back in time easily</li>
+								<li>Multiple versions</li>
+								<li>Let's you add messages so you know what each change was at a glance</li>
+								<li>Collaborate easily with tools like GitHub</li>
+								<li>Ubiquitous system</li>
 					</div>
 							</ul>
 
@@ -211,13 +233,15 @@
 				</div>
 			</section>
 
-			<section class='bg-facebook slide-center'>
+			<section class='bg-grey slide-center'>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>Terms</h2>
 					<div class='grid content-center'>
 							<ul style='text-align:justify;'>
 								<li><strong>Repo/Repository</strong>: Basically just a fancy name for a folder where the changes are tracked with git</li>
+								<li><strong>Commit</strong>: </li>
+								<li><strong>Staging Area</strong>: </li>
 					</div>
 							</ul>
 
@@ -225,7 +249,16 @@
 				</div>
 			</section>
 
-			<section class='bg-facebook slide-center'>
+			<section class='bg-red slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Usage</h2>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-red slide-center'>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>How can I use git?</h2>
@@ -235,12 +268,220 @@
 				</div>
 			</section>
 
-			<section class='bg-facebook slide-center'>
+			<section class='bg-white slide-center'>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
-					<h2>How does git work? (CLI Version)</h2>
-					<p>The very basics of git are super simple just</p>
-<ol><li style="text-align: left;">Init your repo using: <br><pre><code class="language-bash">git init "project-name"</code></pre></li><br><li style="text-align: left;">Once you have added/changed/deleted your files you add them to "the stage" (also called staging your files) with: <br><pre><code class="language-bash">git add .</code></pre>(The . means add everything in this folder)</li><br> <li style="text-align: left;">Commit your staged changes to the git history with a message using <br><pre><code class="language-bash">git commit -m "Your message goes here"</code></pre></li></ol>
+					<h2>Git Flow</h2>
+<ol class='content-center'><li> Create or <strong>clone</strong> a repo</li> <li><strong>Add</strong> our changes that we want to save</li> <li><strong>Commit </strong>(save) our changes</li> <li><strong>Push</strong> our commit</li> <li>Repeat steps 2 - 4 as you develop your project</li></ol>
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-white slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Git Flow</h2>
+<img src='./static/images/flow.png' alt='flow' >
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-white slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Step 1; Git Init/Clone</h2>
+					<p>We use this command to create a new repository <br><br>You can think of a repository as a folder that holds all the files you are interested in managing</p>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-white slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Step 2; Add Your Changes</h2>
+					<p>Change your files, this can be any <strong>CUD</strong> operations (Create, update, delete), then <strong>add them to the staging area</strong></p>
+<img src='./static/images/add.png' alt='add' >
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-white slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Step 3; Commit Changes</h2>
+					<p>Saving the changes we stored in the staging area is called <strong>committing</strong> your changes</p>
+<img src='./static/images/commit.png' alt='commit' >
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-white slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Step 4; Push Changes</h2>
+					<p>Once your changes are committed, you can push them to the remote repository. Once they are pushed, your teammates can start working off of the changes you made!</p>
+<img src='./static/images/push.png' alt='push' >
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-purple slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Demo</h2>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-purple slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>What we're going to do</h2>
+<ol class='content-center'><li>Create a repo on github</li> <li>Clone it locally</li> <li>Make some changes</li> <li>Add & Commit the changes</li> <li>Push the changes to github</li></ol>
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-purple slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Step 1; Git Init on GitHub</h2>
+					<p>Head to github.com and login. Then hit the + in the corner and click on New Repository</p>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-purple slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Step 1; Git Init on GitHub</h2>
+					<div class='grid content-center'>
+							<ul style='text-align:justify;'>
+								<li>Enter a name</li>
+								<li>Enter a description</li>
+								<li>Choose public or private</li>
+								<li>And check off the box for</li>
+								<li>Add a README file</li>
+								<li>Hit Create Repository</li>
+					</div>
+							</ul>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-purple slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Step 1.5; Git Clone</h2>
+					<p>Now we need to get the files locally, to do this go into GitHub Desktop and hit File --> Clone Repository. This should load a list of your projects on Github and let you select where to put the files (hit refresh if it's not there).</p>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-purple slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Step 2; Make & Add Changes</h2>
+					<p>Go wherever you saved the repository and edit the README.md file to add what you want (any text editor like Notepad or TextEdit will work). GitHub desktop combines adding your changes with the next step by selecting the changed files in the program.</p>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-purple slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Step 3; Commit your changes</h2>
+					<p>Now you have added your files you need to add a commit message (and optionally a description), and then hit Commit to main</p>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-purple slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Step 4; Push your changes</h2>
+					<p>Now the changes are made you can push them to your repo, and you will see the changes on GitHub (remember to tell others to pull when you make a change)!</p>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-green slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Extra Features</h2>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-green slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Branches</h2>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-green slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Merging</h2>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-green slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Using Git Remotely at the command line</h2>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-green slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>How does the git command line work?</h2>
+					<p>The flow is the same, you just run the following commands</p>
+<ol><li style="text-align: left;">Create the repo in GitHub Desktop or on the GitHub site</li><br><li style="text-align: left;">Clone the repository using GitHub desktop, or <br><pre><code class="language-bash">git clone https://github.com/username/repo-name</code></pre></li><br><li style="text-align: left;">Once you have added/changed/deleted your files you add them to "the stage" (also called staging your files) with: <br><pre><code class="language-bash">git add .</code></pre>(The . means add everything in this folder)</li><br> <li style="text-align: left;">Commit your staged changes to the git history with a message using <br><pre><code class="language-bash">git commit -m "Your message goes here"</code></pre></li> <br><li style="text-align: left;">Push your commits in Github Desktop, or at the command line using <br><pre><code class="language-bash">git push</code></pre></li></ol>
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-blue slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>More things to look into</h2>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-blue slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>Open Source</h2>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-blue slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>CI/CD</h2>
+
 					</div>
 				</div>
 			</section>
